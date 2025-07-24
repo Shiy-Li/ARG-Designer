@@ -1,2 +1,2 @@
 # ARG-Designer
-Automatic Multi-agent Communication Topology Design
+Offical implementation of "Assemble Your Crew: Automatic Multi-agent Communication Topology Design via Autoregressive Graph Generation", comming soon...
