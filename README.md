@@ -52,14 +52,6 @@ BASE_URL = ""  # the BASE_URL of OpenAI LLM backend
 API_KEY = ""   # for OpenAI LLM backend
 ```
 
-### Download Datasets
-
-Download MMLU, HumanEval and GSM8K datasets from their official sources and put them in the `datasets` folder:
-
-- **MMLU**: Download from [MMLU](https://github.com/hendrycks/test) and place in `datasets/MMLU/`
-- **HumanEval**: Download from [HumanEval](https://github.com/openai/human-eval) and place in `datasets/humaneval/`
-- **GSM8K**: Download from [GSM8K](https://github.com/openai/grade-school-math) and place in `datasets/gsm8k/`
-
 ### Run ARG-Designer on HumanEval
 
 The complete workflow consists of three main stages:
