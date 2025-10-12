@@ -34,7 +34,7 @@ ARG-Designer/
 │   ├── gsm8k/               # GSM8K experiments
 │   ├── mmlu/                # MMLU experiments
 │   └── utils.py             # Experiment utilities
-├── GDesigner/               # Utility tools (refers to GDesigner framework)
+├── mas_framework/               # Utility tools (refers to GDesigner)
 │   ├── agents/             # Agent implementations
 │   ├── graph/              # Graph structure utilities
 │   ├── llm/                # Language model interfaces
