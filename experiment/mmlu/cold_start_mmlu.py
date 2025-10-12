@@ -18,7 +18,7 @@ import argparse
 import random
 from datasets.mmlu_dataset import MMLUDataset
 from datasets.MMLU.download import download
-from GDesigner.graph.graph import Graph, TestGraph
+from mas_framework.graph.graph import Graph, TestGraph
 
 
 def parse_args():

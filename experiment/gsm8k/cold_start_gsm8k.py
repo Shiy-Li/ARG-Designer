@@ -12,8 +12,8 @@ from tqdm import tqdm
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 sys.stdout.reconfigure(encoding='utf-8')
 
-from GDesigner.graph.graph import Graph, TestGraph
-from GDesigner.tools.reader.readers import JSONLReader
+from mas_framework.graph.graph import Graph, TestGraph
+from mas_framework.tools.reader.readers import JSONLReader
 from experiment.utils import get_kwargs, save_graph_with_features
 from experiment.gsm8k.gsm8k_prompt_set import ROLE_DESCRIPTION
 from datasets.gsm8k_dataset import gsm_data_process, gsm_get_predict

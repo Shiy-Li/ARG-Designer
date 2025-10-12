@@ -1,9 +1,10 @@
 from typing import Type
 from class_registry import ClassRegistry
 
-from mas_framework.prompt.prompt_set import PromptSet
+from mas_framework.graph import Node
 
-class PromptSetRegistry:
+
+class AgentRegistry:
     registry = ClassRegistry()
 
     @classmethod
@@ -15,7 +16,7 @@ class PromptSetRegistry:
         return cls.registry.keys()
 
     @classmethod
-    def get(cls, name: str, *args, **kwargs) -> PromptSet:
+    def get(cls, name: str, *args, **kwargs) -> Node:
         return cls.registry.get(name, *args, **kwargs)
 
     @classmethod

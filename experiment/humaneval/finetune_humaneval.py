@@ -22,9 +22,9 @@ from experiment.train_ARGDesigner import train
 from experiment.utils import load_model, generate_graph, convert_to_pyg_graph, get_kwargs, save_graph_with_features
 from sentence_transformers import SentenceTransformer
 from experiment import process_dataset as gdata
-from GDesigner.graph.graph import Graph, TestGraph
-from GDesigner.tools.reader.readers import JSONLReader
-from GDesigner.tools.coding.python_executor import PyExecutor
+from mas_framework.graph.graph import Graph, TestGraph
+from mas_framework.tools.reader.readers import JSONLReader
+from mas_framework.tools.coding.python_executor import PyExecutor
 from experiment.humaneval.humaneval_prompt_set import ROLE_DESCRIPTION
 
 FINETUNE_DATA_DIR = "/root/ARG-Designer/experiment/FinetuneData_humaneval"

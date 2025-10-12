@@ -22,8 +22,8 @@ from experiment.train_ARGDesigner import train
 from experiment.utils import save_graph_with_features, get_kwargs, load_model, generate_graph, convert_to_pyg_graph
 from sentence_transformers import SentenceTransformer
 from experiment import process_dataset as gdata
-from GDesigner.graph.graph import Graph, TestGraph
-from GDesigner.tools.reader.readers import JSONLReader
+from mas_framework.graph.graph import Graph, TestGraph
+from mas_framework.tools.reader.readers import JSONLReader
 from datasets.gsm8k_dataset import gsm_data_process, gsm_get_predict
 from experiment.gsm8k.gsm8k_prompt_set import ROLE_DESCRIPTION
 

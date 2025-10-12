@@ -23,7 +23,7 @@ from experiment.utils import load_model, generate_graph, convert_to_pyg_graph, A
 from sentence_transformers import SentenceTransformer
 from experiment import process_dataset as gdata
 
-from GDesigner.graph.graph import Graph, TestGraph
+from mas_framework.graph.graph import Graph, TestGraph
 from datasets.mmlu_dataset import MMLUDataset
 from experiment.mmlu.mmlu_prompt_set import ROLE_DESCRIPTION
 

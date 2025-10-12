@@ -11,10 +11,10 @@ from finetune_gsm8k import setup_environment
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
-from GDesigner.utils.globals import Cost, PromptTokens, CompletionTokens
+from mas_framework.utils.globals import Cost, PromptTokens, CompletionTokens
 from sentence_transformers import SentenceTransformer
-from GDesigner.tools.reader.readers import JSONLReader
-from GDesigner.graph.graph import TestGraph
+from mas_framework.tools.reader.readers import JSONLReader
+from mas_framework.graph.graph import TestGraph
 from experiment.utils import load_model, generate_graph, convert_to_pyg_graph
 from datasets.gsm8k_dataset import gsm_data_process, gsm_get_predict
 from gsm8k_prompt_set import ROLE_DESCRIPTION

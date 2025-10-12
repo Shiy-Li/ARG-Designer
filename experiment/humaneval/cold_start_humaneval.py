@@ -13,9 +13,9 @@ from experiment.utils import get_kwargs, save_graph_with_features
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 sys.stdout.reconfigure(encoding='utf-8')
 
-from GDesigner.graph.graph import Graph, TestGraph
-from GDesigner.tools.reader.readers import JSONLReader
-from GDesigner.tools.coding.python_executor import PyExecutor
+from mas_framework.graph.graph import Graph, TestGraph
+from mas_framework.tools.reader.readers import JSONLReader
+from mas_framework.tools.coding.python_executor import PyExecutor
 from experiment.humaneval.humaneval_prompt_set import ROLE_DESCRIPTION
 
 OUTPUT_DIR = "../ColdStartData_humaneval"

@@ -9,11 +9,11 @@ import datetime
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-from GDesigner.utils.globals import Cost, PromptTokens, CompletionTokens
+from mas_framework.utils.globals import Cost, PromptTokens, CompletionTokens
 from sentence_transformers import SentenceTransformer
-from GDesigner.tools.reader.readers import JSONLReader
-from GDesigner.tools.coding.python_executor import PyExecutor
-from GDesigner.graph.graph import TestGraph
+from mas_framework.tools.reader.readers import JSONLReader
+from mas_framework.tools.coding.python_executor import PyExecutor
+from mas_framework.graph.graph import TestGraph
 from experiment.utils import load_model, generate_graph, convert_to_pyg_graph
 from experiment.humaneval.finetune_humaneval import setup_environment
 from experiment.humaneval.humaneval_prompt_set import ROLE_DESCRIPTION

@@ -16,9 +16,9 @@ import datetime
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
-from GDesigner.utils.globals import Cost, PromptTokens, CompletionTokens
+from mas_framework.utils.globals import Cost, PromptTokens, CompletionTokens
 from sentence_transformers import SentenceTransformer
-from GDesigner.graph.graph import TestGraph
+from mas_framework.graph.graph import TestGraph
 from experiment.utils import Accuracy, load_model, generate_graph, convert_to_pyg_graph
 from datasets.mmlu_dataset import MMLUDataset
 from datasets.MMLU.download import download
