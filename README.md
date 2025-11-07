@@ -1,6 +1,6 @@
 # ARG-Designer
 
-Official implementation of ["Assemble Your Crew: Automatic Multi-agent Communication Topology Design via Autoregressive Graph Generation"](https://arxiv.org/abs/2507.18224).
+Official implementation of ["Assemble Your Crew: Automatic Multi-agent Communication Topology Design via Autoregressive Graph Generation"](https://arxiv.org/abs/2507.18224), accepted as an oral presentation at AAAI 2026.
 
 ## Overview
 
