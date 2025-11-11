@@ -34,7 +34,7 @@ from bs4 import BeautifulSoup
 from pylatexenc.latex2text import LatexNodes2Text
 from pptx import Presentation
 
-from mas_framework.llm import VisualLLMRegistry
+# from mas_framework.llm import VisualLLMRegistry
 from mas_framework.utils.log import logger
 from mas_framework.utils.globals import Cost
 
