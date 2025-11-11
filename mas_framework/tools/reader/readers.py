@@ -266,47 +266,47 @@ class PythonReader(Reader):
         return file_content, execution_result, error
 
 
-class IMGReader(Reader):
-    def parse(self, file_path: Path, task: str = "Describe this image as detail as possible." ) -> str:
-        logger.info(f"Reading image file from {file_path}.")
-        runner = VisualLLMRegistry.get()
-        answer = runner.gen(task, file_path)
-        return answer
+# class IMGReader(Reader):
+#     def parse(self, file_path: Path, task: str = "Describe this image as detail as possible." ) -> str:
+#         logger.info(f"Reading image file from {file_path}.")
+#         runner = VisualLLMRegistry.get()
+#         answer = runner.gen(task, file_path)
+#         return answer
 
-class VideoReader(Reader): 
-    def parse(self, file_path: Path, task: str = "Describe this image as detail as possible.", frame_interval: int = 30, used_audio: bool = True) -> list:
-        logger.info(f"Processing video file from {file_path} with frame interval {frame_interval}.")
-        runner = VisualLLMRegistry.get()
-        answer = runner.gen_video(task, file_path, frame_interval)
+# class VideoReader(Reader): 
+#     def parse(self, file_path: Path, task: str = "Describe this image as detail as possible.", frame_interval: int = 30, used_audio: bool = True) -> list:
+#         logger.info(f"Processing video file from {file_path} with frame interval {frame_interval}.")
+#         runner = VisualLLMRegistry.get()
+#         answer = runner.gen_video(task, file_path, frame_interval)
 
-        if used_audio:
-            audio_content = AudioReader.parse(file_path)
+#         if used_audio:
+#             audio_content = AudioReader.parse(file_path)
 
-        return answer + "The audio includes:\n" + audio_content
+#         return answer + "The audio includes:\n" + audio_content
 
 
 # Support 41 kinds of files.
 READER_MAP = { 
-    ".png": IMGReader(),
-    ".jpg": IMGReader(),
-    ".jpeg": IMGReader(),
-    ".gif": IMGReader(),
-    ".bmp": IMGReader(),
-    ".tiff": IMGReader(),
-    ".tif": IMGReader(),
-    ".webp": IMGReader(),
+    # ".png": IMGReader(),
+    # ".jpg": IMGReader(),
+    # ".jpeg": IMGReader(),
+    # ".gif": IMGReader(),
+    # ".bmp": IMGReader(),
+    # ".tiff": IMGReader(),
+    # ".tif": IMGReader(),
+    # ".webp": IMGReader(),
     ".mp3": AudioReader(),
     ".m4a": AudioReader(),
     ".wav": AudioReader(),
-    ".MOV": VideoReader(),
-    ".mp4": VideoReader(),
-    ".mov": VideoReader(),
-    ".avi": VideoReader(),
-    ".mpg": VideoReader(),
-    ".mpeg": VideoReader(),
-    ".wmv": VideoReader(),
-    ".flv": VideoReader(),
-    ".webm": VideoReader(),
+    # ".MOV": VideoReader(),
+    # ".mp4": VideoReader(),
+    # ".mov": VideoReader(),
+    # ".avi": VideoReader(),
+    # ".mpg": VideoReader(),
+    # ".mpeg": VideoReader(),
+    # ".wmv": VideoReader(),
+    # ".flv": VideoReader(),
+    # ".webm": VideoReader(),
     ".zip": ZipReader(),
     ".pptx": PPTXReader(),
     ".xlsx": ExcelReader(),
