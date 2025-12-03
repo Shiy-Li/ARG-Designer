@@ -292,7 +292,6 @@ class ARGDesigner(nn.Module):
         self.role_to_id = {}
         self.id_to_role = {}
 
-        # 直接使用 role_mapping
         self.role_to_id = args.role_mapping
         self.id_to_role = {int(k) if isinstance(k, str) else k: v for k, v in args.id_to_role.items()}
         self.START_TOKEN = getattr(args, 'START_TOKEN_ID', len(self.role_to_id))
@@ -528,7 +527,6 @@ class ARGDesigner(nn.Module):
         ), dim=1)
         x_edge[torch.arange(sum(x_len)), x_edge_len - 1, len_edge_vec - 1] = 1
 
-        # 删除 if self.use_role_as_type 分支，直接保留 True 分支
         batch_accuracies = []
         for b in range(batch_size):
             true_node_types, pred_node_types = [], []
