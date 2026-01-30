@@ -334,9 +334,8 @@ def find_latest_model_dir(base_dir='output', prefix='aqua_finetuned_model'):
     return os.path.join(base_dir, sorted(candidate_dirs)[-1]) if candidate_dirs else None
 
 
-async def main(flag):
+async def main():
     cli_args = parse_cli_args()
-    cli_args.pretrain = flag
     setup_environment(cli_args.seed)
     loop = asyncio.get_running_loop()
 
@@ -380,4 +379,4 @@ async def main(flag):
 if __name__ == '__main__':
     if sys.platform == "win32":
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    asyncio.run(main(True))
+    asyncio.run(main())
