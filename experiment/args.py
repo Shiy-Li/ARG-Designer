@@ -54,7 +54,7 @@ class Args:
         """
         Update args when load a trained model: use settings from the saved model
         """
-        args = self.parser.parse_args()
+        args, _ = self.parser.parse_known_args()
         args.time = '{0:%Y_%m_%d_%H_%M_%S}'.format(datetime.datetime.now())
         args.is_dag = True
         args.dir_input = 'output/'
