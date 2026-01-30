@@ -8,11 +8,11 @@ import argparse
 import random
 import csv
 from tqdm import tqdm
-from experiment.utils import get_kwargs, save_graph_with_features
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 sys.stdout.reconfigure(encoding='utf-8')
 
+from experiment.utils import get_kwargs, save_graph_with_features
 from mas_framework.graph.graph import Graph, TestGraph
 from mas_framework.tools.reader.readers import JSONLReader
 from mas_framework.tools.coding.python_executor import PyExecutor
