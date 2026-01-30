@@ -87,7 +87,10 @@ class MMLUGraphDataset:
         nx_graphs = []
         for file in graph_files:
             try:
-                pyg_graph = torch.load(file)
+                try:
+                    pyg_graph = torch.load(file, weights_only=False)
+                except TypeError:
+                    pyg_graph = torch.load(file)
                 num_nodes = pyg_graph.num_nodes
                 nx_graph = nx.DiGraph()
                 nx_graph.add_nodes_from(range(num_nodes))
