@@ -75,8 +75,10 @@ This stage:
 Train the ARG-Designer model using the generated data:
 
 ```bash
-python finetune_humaneval.py --pretrain --dataset_name humaneval --llm_name gpt-4o-mini --batch_size 4 --num_iterations 10
+python finetune_humaneval.py --pretrain --llm_name gpt-4o-mini --batch_size 4
 ```
+
+Note: Stage 2 requires the task split file (e.g., `task_split_humaneval.json`) generated in Stage 1.
 
 This stage includes:
 - **Pre-training**: Train the base model on cold-start data
@@ -105,10 +107,10 @@ The evaluation will:
 cd experiment/gsm8k
 
 # Cold start data generation
-python cold_start_gsm8k.py --dataset_name gsm8k --llm_name gpt-4o-mini --batch_size 4 --num_iterations 10
+python cold_start_gsm8k.py --llm_name gpt-4o-mini --batch_size 4 --num_iterations 10
 
 # Training and fine-tuning  
-python finetune_gsm8k.py --pretrain --dataset_name gsm8k --llm_name gpt-4o-mini --batch_size 4 --num_iterations 10
+python finetune_gsm8k.py --pretrain --llm_name gpt-4o-mini --batch_size 4
 
 # Evaluation
 python evaluate_gsm8k.py --model_path ./output/your_model_path --eval_batch_size 32
@@ -120,13 +122,13 @@ python evaluate_gsm8k.py --model_path ./output/your_model_path --eval_batch_size
 cd experiment/mmlu
 
 # Cold start data generation
-python cold_start_mmlu.py --dataset_name mmlu --llm_name gpt-4o-mini --batch_size 4 --num_iterations 10
+python cold_start_mmlu.py --llm_name gpt-4o-mini --batch_size 4 --num_iterations 10
 
 # Training and fine-tuning
-python finetune_mmlu.py --pretrain --dataset_name mmlu --llm_name gpt-4o-mini --batch_size 4 --num_iterations 10  
+python finetune_mmlu.py --pretrain --llm_name gpt-4o-mini --batch_size 4
 
 # Evaluation
-python evaluate_mmlu.py --model_path ./output/your_model_path --dataset_name mmlu --llm_name gpt-4o-mini --eval_batch_size 32
+python evaluate_mmlu.py --model_path ./output/your_model_path --llm_name gpt-4o-mini --eval_batch_size 32
 ```
 
 ## Citation
