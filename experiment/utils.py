@@ -106,7 +106,10 @@ def load_model(model_dir, ef=False):
         raise FileNotFoundError(f"No model file found at {model_file}")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    checkpoint = torch.load(model_file, map_location=device)
+    try:
+        checkpoint = torch.load(model_file, map_location=device, weights_only=False)
+    except TypeError:
+        checkpoint = torch.load(model_file, map_location=device)
     if not all(k in checkpoint for k in ('args', 'data_statistics', 'model_state_dict')):
         raise ValueError("Invalid checkpoint format. Missing required keys.")
 
