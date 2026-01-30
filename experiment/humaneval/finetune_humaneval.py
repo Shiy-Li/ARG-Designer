@@ -335,9 +335,8 @@ def find_latest_model_dir(base_dir='output', prefix='humaneval_finetuned_model')
     return os.path.join(base_dir, latest)
 
 
-async def main(flag=True):
+async def main():
     cli_args = parse_cli_args()
-    cli_args.pretrain = flag
     setup_environment(cli_args)
     loop = asyncio.get_running_loop()
 
@@ -376,4 +375,4 @@ async def main(flag=True):
 if __name__ == '__main__':
     if sys.platform == "win32":
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    asyncio.run(main(False))
+    asyncio.run(main())
