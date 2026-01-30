@@ -320,9 +320,8 @@ def find_latest_model_dir(bd='output', pf='gsm8k_finetuned_model'):
     return os.path.join(bd, sorted(cds)[-1]) if cds else None
 
 
-async def main(flag):
+async def main():
     args = parse_cli_args()
-    args.pretrain = flag
     setup_environment(args)
     loop = asyncio.get_running_loop()
 
@@ -370,4 +369,4 @@ async def main(flag):
 if __name__ == '__main__':
     if sys.platform == "win32":
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    asyncio.run(main(True))
+    asyncio.run(main())
