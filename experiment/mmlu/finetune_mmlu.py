@@ -330,9 +330,8 @@ def find_latest_model_dir(base_dir='output'):
     return os.path.join(base_dir, sorted(dirs)[-1]) if dirs else None
 
 
-async def main(flag):
+async def main():
     args = parse_cli_args()
-    args.pretrain = flag
     setup_environment(args)
     loop = asyncio.get_running_loop()
 
@@ -370,4 +369,4 @@ async def main(flag):
 
 
 if __name__ == '__main__':
-    asyncio.run(main(True))
+    asyncio.run(main())
