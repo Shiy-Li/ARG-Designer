@@ -112,7 +112,7 @@ def load_model(model_dir, ef=False):
 
     saved_args = checkpoint['args']
     data_statistics = checkpoint['data_statistics']
-    saved_args['data_dir'] = '../../ColdStartData_' + saved_args.get('dataset', '')
+    saved_args['data_dir'] = '../ColdStartData_' + saved_args.get('dataset', '')
     args = Args()
     args.update_args_from_dict(saved_args)
     args.device = device
