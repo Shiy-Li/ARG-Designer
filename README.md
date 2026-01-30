@@ -133,7 +133,7 @@ python evaluate_mmlu.py --model_path ./output/your_model_path --llm_name gpt-4o-
 
 ## Citation
 
-If you use this code in your research, please cite our paper:
+If you compare with, build on, or use aspects of this work, please cite the following:
 
 ```bibtex
 @inproceedings{li2026assemble,
