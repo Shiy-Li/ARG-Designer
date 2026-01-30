@@ -136,11 +136,11 @@ python evaluate_mmlu.py --model_path ./output/your_model_path --llm_name gpt-4o-
 If you use this code in your research, please cite our paper:
 
 ```bibtex
-@article{li2025assemble,
+@inproceedings{li2026assemble,
   title={Assemble your crew: Automatic multi-agent communication topology design via autoregressive graph generation},
   author={Li, Shiyuan and Liu, Yixin and Wen, Qingsong and Zhang, Chengqi and Pan, Shirui},
-  journal={arXiv preprint arXiv:2507.18224},
-  year={2025}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2026}
 }
 ```
 
