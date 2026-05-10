@@ -140,6 +140,9 @@ If you compare with, build on, or use aspects of this work, please cite the foll
   title={Assemble your crew: Automatic multi-agent communication topology design via autoregressive graph generation},
   author={Li, Shiyuan and Liu, Yixin and Wen, Qingsong and Zhang, Chengqi and Pan, Shirui},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={28},
+  pages={23142--23150},
   year={2026}
 }
 ```
